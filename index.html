@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <h1>Simple Task Board</h1>
+    </header>
+    <main>
+        <form method="POST" action="http://localhost:3000/tasks" target="#">
+            <input type="text" name="title" placeholder="Task title">
+            <textarea name="description" id="description" cols="30" rows="10" placeholder="Description"></textarea>
+            <button class="crt">Create</button>
+        </form>
+        <div>
+            <h2>To Do</h2>
+            <ul class="card-column" id="todo-container"></ul>
+        </div>
+        <button class="move" id="move-in-progress">></button>
+        <div>
+            <h2>In Progress</h2>
+            <ul class="card-column in-progress" id="in-progress-container"></ul>
+        </div>
+        <button class="move" id="move-done">></button>
+        <div>
+            <h2>Done</h2>
+            <ul class="card-column done" id="done-container"></ul>
+        </div>
+    </main>
+</body>
+
+</html>
